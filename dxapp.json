@@ -1,7 +1,7 @@
 {
-  "name": "bwa_sambamba",
-  "title": "Alignment - BWA MEM, SAMBAMBA view, SAMBAMBA sort, SAMBABMA markduplicates",
-  "summary": "Aligns short sequence reads to a reference genome with BWA MEM and sorts and dedups BAM files with SAMBAMBA",
+  "name": "bwa_sambamba_picard",
+  "title": "Alignment - BWA MEM, SAMBAMBA view, SAMBAMBA sort, Picard MarkDuplicates",
+  "summary": "Aligns short sequence reads to a reference genome with BWA MEM, sorts BAM files with SAMBAMBA, and dedups BAM files with Picard",
   "dxapi": "1.0.0",
   "version": "0.0.1",
   "categories": [
@@ -133,8 +133,8 @@
       "optional": true
     },
     {
-      "name": "advanced_sambamba_markdups_options",
-      "label": "Advanced SAMBAMBA command line options (for SAMBAMBA markduplicates)",
+      "name": "advanced_picard_markdups_options",
+      "label": "Advanced Picard command line options (for Picard MarkDuplicates)",
       "class": "string",
       "optional": true
     },
@@ -172,10 +172,13 @@
   ],
   "runSpec": {
     "interpreter": "python2.7",
-    "file": "src/bwa_sambamba.py",
+    "file": "src/bwa_sambamba_picard.py",
     "distribution": "Ubuntu",
     "release": "14.04",
     "execDepends": [
+      {
+        "name": "openjdk-8-jre-headless"
+      },
       {
         "name": "dx_applet_utilities",
         "package_manager": "git",
@@ -198,7 +201,7 @@
    },
    "timeoutPolicy": {
      "main": {
-       "hours": 15
+       "hours": 24
      }
    }
   },

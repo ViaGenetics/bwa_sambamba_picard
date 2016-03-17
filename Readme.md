@@ -1,7 +1,7 @@
 <!-- dx-header -->
-# Alignment - BWA MEM, SAMBAMBA view, SAMBAMBA sort, SAMBABMA markduplicates (DNAnexus Platform App)
+# Alignment - BWA MEM, SAMBAMBA view, SAMBAMBA sort, Picard MarkDuplicates (DNAnexus Platform App)
 
-Aligns short sequence reads to a reference genome with BWA MEM and sorts and dedups BAM files with SAMBAMBA
+Aligns short sequence reads to a reference genome with BWA MEM, sorts BAM files with SAMBAMBA, and dedups BAM files with Picard
 
 This is the source code for an app that runs on the DNAnexus Platform.
 For more information about how to run or modify it, see
